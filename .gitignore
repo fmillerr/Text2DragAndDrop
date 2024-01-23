@@ -13,16 +13,16 @@ syntax: glob
 *.userprefs
 
 # Build results
-[Dd]ebug/
-[Dd]ebugPublic/
-[Rr]elease/
-[Rr]eleases/
-x64/
-x86/
-bld/
-[Bb]in/
-[Oo]bj/
-[Ll]og/
+Text2DragAndDrop/[Dd]ebug/
+Text2DragAndDrop/[Dd]ebugPublic/
+Text2DragAndDrop/[Rr]elease/
+Text2DragAndDrop/[Rr]eleases/
+Text2DragAndDrop/x64/
+Text2DragAndDrop/x86/
+Text2DragAndDrop/bld/
+Text2DragAndDrop/[Bb]in/
+Text2DragAndDrop/[Oo]bj/
+Text2DragAndDrop/[Ll]og/
 
 # Visual Studio 2015 cache/options directory
 .vs/
