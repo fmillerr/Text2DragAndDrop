@@ -1,0 +1,12 @@
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\bin\Release\Properties\file.png
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\bin\Release\Text2DragAndDrop.exe.config
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\bin\Release\Text2DragAndDrop.exe
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\bin\Release\Text2DragAndDrop.pdb
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.csproj.AssemblyReference.cache
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.csproj.SuggestedBindingRedirects.cache
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.Properties.Resources.resources
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.Text2DragAndDropDialog.resources
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.csproj.GenerateResource.cache
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.csproj.CoreCompileInputs.cache
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.exe
+C:\dev\Text2DragAndDrop\Text2DragAndDrop\obj\Release\Text2DragAndDrop.pdb
