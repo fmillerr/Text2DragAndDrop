@@ -1,1 +1,2 @@
-test
+- Das Programm kann gestartet werden und läuft im Hintergrund. Im Tray kann man Rechtsklicken und das ganze öffnen.
+- Das Programm kann auch über den Autohotkey gestartet werden. Mit STRG + C + C kann der Hotkey getriggered werden. Dann öffnet sich das Programm einmalig und schließt sich nach dem DragAndDrop 
