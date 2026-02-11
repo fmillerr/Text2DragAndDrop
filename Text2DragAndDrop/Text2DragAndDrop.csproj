@@ -26,18 +26,12 @@
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
-        <DebugType>pdbonly</DebugType>
+        <DebugType>none</DebugType>
         <Optimize>true</Optimize>
         <OutputPath>bin\Release\</OutputPath>
         <DefineConstants>TRACE</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <PostBuildEvent>xcopy "C:\dev\Text2DragAndDrop\Text2DragAndDrop\bin\Debug" "C:\CustomPrograms\TextToClippyFile" /h /i /c /k /e /r /y</PostBuildEvent>
-    </PropertyGroup>
-    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <PreBuildEvent>del /S /Q "C:\CustomPrograms\TextToClippyFile"</PreBuildEvent>
     </PropertyGroup>
     <ItemGroup>
         <Reference Include="System"/>
@@ -85,11 +79,6 @@
     </ItemGroup>
     <ItemGroup>
         <None Include="App.config"/>
-    </ItemGroup>
-    <ItemGroup>
-      <Content Include="Properties\file.png">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
