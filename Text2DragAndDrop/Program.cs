@@ -2,6 +2,8 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Text;
 using System.Windows.Forms;
 
 namespace Text2DragAndDrop
@@ -16,7 +18,7 @@ namespace Text2DragAndDrop
         {
             if (args.Length > 0 && args[0] == "open")
             {
-                using (var main = new Text2DragAndDropDialog())
+                using (var main = new Text2DragAndDropDialog(DialogType.sql))
                 {
                     main.ZeigeDialog();
                 }
@@ -52,6 +54,8 @@ namespace Text2DragAndDrop
                     Items =
                     {
                         new ToolStripMenuItem("Text to Clippyfile", null, (a, e) => { OpenDialog(); }),
+                        new ToolStripMenuItem("SQL Result to CSV", null, (a, e) => { ToCSV(); }),
+                        new ToolStripMenuItem("SQL Result to JIRA Table", null, (a, e) => { ToJIRATable(); }),
                         new ToolStripMenuItem("Exit", null, (a, e) => Exit(null, null))
                     },
                     Width = 400
@@ -71,9 +75,60 @@ namespace Text2DragAndDrop
 #endif
         }
 
+        private void ToJIRATable()
+        {
+            var lines = Clipboard.GetText()
+                .Split(new[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+
+            if (lines.Length == 0)
+                return;
+
+            var sb = new StringBuilder();
+
+            sb.AppendLine("<table data-number-column=\"false\" data-layout=\"align-start\" data-autosize=\"false\">");
+            sb.AppendLine("<tbody>");
+
+            for (int i = 0; i < lines.Length; i++)
+            {
+                var cells = lines[i].Split('\t');
+
+                sb.AppendLine("<tr>");
+
+                foreach (var cell in cells)
+                {
+                    if (i == 0) // Header
+                    {
+                        sb.AppendLine(
+                            $"<th><p><strong>{System.Net.WebUtility.HtmlEncode(cell)}</strong></p></th>");
+                    }
+                    else
+                    {
+                        sb.AppendLine(
+                            $"<td><p>{System.Net.WebUtility.HtmlEncode(cell)}</p></td>");
+                    }
+                }
+
+                sb.AppendLine("</tr>");
+            }
+
+            sb.AppendLine("</tbody>");
+            sb.AppendLine("</table>");
+
+            ClipboardHelper.CopyToClipboard(sb.ToString(), Clipboard.GetText());
+        }
+
+        private void ToCSV()
+        {
+            using (var main = new Text2DragAndDropDialog(DialogType.table))
+            {
+                Clipboard.SetText(Clipboard.GetText().Replace("\t", ";"));
+                main.ZeigeDialog();
+            }
+        }
+
         private void OpenDialog()
         {
-            using (var main = new Text2DragAndDropDialog())
+            using (var main = new Text2DragAndDropDialog(DialogType.sql))
             {
                 main.ZeigeDialog();
             }

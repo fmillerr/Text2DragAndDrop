@@ -64,7 +64,6 @@
             this.filename.Name = "filename";
             this.filename.Size = new System.Drawing.Size(535, 20);
             this.filename.TabIndex = 1000005;
-            this.filename.Text = "ABO-.sql";
             // 
             // clipboard
             // 

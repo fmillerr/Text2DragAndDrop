@@ -47,6 +47,7 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="ClipboardHelper.cs" />
         <Compile Include="Text2DragAndDropDialog.cs">
             <SubType>Form</SubType>
         </Compile>
