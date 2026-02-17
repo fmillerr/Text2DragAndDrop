@@ -16,6 +16,8 @@ Kleine Windows-Tray-App, die **Text aus der Zwischenablage** in eine **temporär
 
 - Tray-Menü:
   - `Text to Clippyfile`
+  - `SQL Result to CSV`
+  - `SQL Result to JIRA Table`
   - `Exit`
 - Dialog:
   - Textfeld für Dateiname
